@@ -104,9 +104,11 @@ public class MainActivity extends Activity {
 
         //start of lab2
 
-        if(val1 == 1 || val2 == 1){
-            p1_total += 0;
-            text = "Round: " + count;
+        if(val1 == 1 && val2 == 1){
+
+
+            p1_total = 0;
+            text = "Round:" + count;
 
             //go to Player2 activity
             Intent intent = new Intent(MainActivity.this,Player2.class);
@@ -116,9 +118,10 @@ public class MainActivity extends Activity {
             startActivity(intent);
 
 
-        }else if (val1 == 1 && val2 == 1){
-            p1_total = 0;
-            text = "Round:" + count;
+        }else if (val1 == 1 || val2 == 1){
+
+            p1_total += 0;
+            text = "Round: " + count;
 
             //go to Player2 activity
             Intent intent = new Intent(MainActivity.this,Player2.class);
